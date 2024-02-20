@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "350a464d-c802-409f-82f7-a4860d6b7219",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31420373"
+	},
+	"item": [
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/cryptorate/usd?start_date=2024-02-18T00:00:00&end_date=2024-02-20T00:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cryptorate",
+						"usd"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2024-02-18T00:00:00"
+						},
+						{
+							"key": "end_date",
+							"value": "2024-02-20T00:00:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "updateWithoutQuery",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/cryptorate/usd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cryptorate",
+								"usd"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "updateWithQuery",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/cryptorate/usd?start_date=2024-02-18T00:00:00&end_date=2024-02-20T00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cryptorate",
+								"usd"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-02-18T00:00:00"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-02-20T00:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:31:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.57 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"error\": \"Wrong format of time_start parameter\"\n}"
+				},
+				{
+					"name": "updateWithWrongDateFormat",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/cryptorate/usd?start_date=2024-02-18T0:00:00&end_date=2024-02-20T00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cryptorate",
+								"usd"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-02-18T0:00:00"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-02-20T00:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 14:48:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.57 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "getData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/cryptorate/usd?start_date=2024-02-18T00:00:00&end_date=2024-02-20T00:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"cryptorate",
+						"usd"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2024-02-18T00:00:00"
+						},
+						{
+							"key": "end_date",
+							"value": "2024-02-20T00:00:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getDataWithoutQuery",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/cryptorate/usd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cryptorate",
+								"usd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 13:50:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.57 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 10:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41087\n        },\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 09:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41136\n        },\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 08:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41181\n        }\n    ]\n}"
+				},
+				{
+					"name": "getDataWithtQuery",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/cryptorate/usd?start_date=2024-02-18T00:00:00&end_date=2024-02-20T00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cryptorate",
+								"usd"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-02-18T00:00:00"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-02-20T00:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 13:50:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.57 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 10:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41087\n        },\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 09:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41136\n        },\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 08:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41181\n        }\n    ]\n}"
+				},
+				{
+					"name": "getDataWrongDateFormat",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/cryptorate/usd?start_date=2024-02-18T1:3:0&end_date=2024-02-20T00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"cryptorate",
+								"usd"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-02-18T1:3:0"
+								},
+								{
+									"key": "end_date",
+									"value": "2024-02-20T00:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Feb 2024 13:50:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.57 (Debian)"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 10:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41087\n        },\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 09:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41136\n        },\n        {\n            \"date\": {\n                \"date\": \"2024-02-20 08:00:00.000000\",\n                \"timezone_type\": 3,\n                \"timezone\": \"UTC\"\n            },\n            \"rate\": 41181\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
