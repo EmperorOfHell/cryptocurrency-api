@@ -1,26 +1,61 @@
-# Docker-Symfony-Stack
+# Cryptocurrency-Api
 
-With this Docker-Symfony-Stack it's possible to setup a local development environment in seconds. Every component is selected for running Symfony 6 in a flavored way.
 
 ## Getting started
-Copy the .env.dist file and edit the entries to your needs:
-```
-cp .env.dist .env
+
+1. Start docker-compose to build and start your environment:
+```console
+docker-compose up -d
 ```
 
-Only start docker-compose to start your environment:
-```
-docker-compose up
-```
-
-After booting the container, you can use composer and the symfony cli insight the php-apache container:
-```
+2. After booting the container inter environment console:
+```console
 docker exec -it symfony-apache-php bash
-symfony check:requirements
-composer create-project symfony/skeleton ./
+```
+3. Next step to make migration
+```console
+php bin/console make:migration
+```
+4. Final step to fill the database. It should be done by calling api [update method](#update-database)
+
+## Available endpoints
+
+### Update database 
+
+```
+ PATCH -> http://localhost/api/cryptorate/{:currency}
 ```
 
-## Installed Packages
-You have three container running: Apache-PHP, MariaDB and Adminer.
-- [Web-App](http://localhost)
-- [Adminer](http://localhost:8080)
+**Path Parameters**
+- currency 
+> Requested exchange rates base (USD, EUR, GBP) ( _required_ )
+
+**Query Parameters**
+- start_date
+>Timeseries starting time in ISO 8601 ( _required_ )
+- end_date
+>Timeseries starting time in ISO 8601 ( _required_ )
+
+
+### Retrieving data
+```
+http://localhost/api/cryptorate/{:currency}
+```
+**Path Parameters**
+- currency 
+> Requested exchange rates base (USD, EUR, GBP) ( _required_ )
+
+**Query Parameters**
+- start_date
+>Timeseries starting time in ISO 8601 ( _optional_ )
+- end_date
+>Timeseries starting time in ISO 8601 ( _optional_ )
+>
+#### Example  
+```
+GET -> http://localhost/api/cryptorate/usd?start_date=2024-02-18T0:00:00&end_date=2024-02-20T00:00:00
+```
+## Resources
+
+- [CoinAPi](https://www.coinapi.io/market-data-api)
+- [PHP container](https://gitlab.com/thomasd.codes/docker-symfony-stack)
