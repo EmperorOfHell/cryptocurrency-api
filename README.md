@@ -23,7 +23,7 @@ php bin/console make:migration
 ### Update database 
 
 ```
- PATCH -> http://localhost/api/cryptorate/{:currency}
+PATCH -> http://localhost/api/cryptorate/{:currency}
 ```
 
 **Path Parameters**
@@ -39,7 +39,7 @@ php bin/console make:migration
 
 ### Retrieving data
 ```
-http://localhost/api/cryptorate/{:currency}
+GET -> http://localhost/api/cryptorate/{:currency}
 ```
 **Path Parameters**
 - currency 
@@ -55,6 +55,9 @@ http://localhost/api/cryptorate/{:currency}
 ```
 GET -> http://localhost/api/cryptorate/usd?start_date=2024-02-18T0:00:00&end_date=2024-02-20T00:00:00
 ```
+## Test
+Application test - [Postman JSON](API.postman_collection.json)
+> Import this file into your Postman environment. This must be a desktop application or you must have Postman Agent installed to work correctly with localhost.
 ## Resources
 
 - [CoinAPi](https://www.coinapi.io/market-data-api)
